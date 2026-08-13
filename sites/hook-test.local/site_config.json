@@ -1,0 +1,9 @@
+{
+ "db_name": "_268fc631814ee36a",
+ "db_password": "0zYwubAAiEVuUuLz",
+ "db_type": "mariadb",
+ "db_user": "_268fc631814ee36a",
+ "installed_apps": [
+  "frappe"
+ ]
+}

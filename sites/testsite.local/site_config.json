@@ -1,0 +1,13 @@
+{
+ "db_name": "_b6f4b71734d51fd5",
+ "db_password": "qrUKjyMxllqk5Zpe",
+ "db_type": "mariadb",
+ "db_user": "_b6f4b71734d51fd5",
+ "installed_apps": [
+  "frappe"
+ ],
+ "nginx_port": 82,
+"domains": [
+  "internal.testsite.local"
+ ]
+}

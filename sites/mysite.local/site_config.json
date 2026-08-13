@@ -1,0 +1,13 @@
+{
+ "allow_tests": true,
+ "db_name": "_94ccb1defe9d78be",
+ "db_password": "Tw0hQulUdB4gFsST",
+ "db_type": "mariadb",
+ "db_user": "_94ccb1defe9d78be",
+ "encryption_key": "jPWLTvLsMMLqCuu2MQXB4GkAh6JE9xKI8QxT0rx8PIg=",
+ "installed_apps": [
+  "frappe",
+  "fieldapp",
+  "practice_app"
+ ]
+}
