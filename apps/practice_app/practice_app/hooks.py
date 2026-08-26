@@ -23,7 +23,11 @@ app_license = "mit"
 
 # Includes in <head>
 # ------------------
-
+doc_events = {
+    "ToDo": {
+        "validate": "practice_app.api.custom_logic"
+    }
+}
 # include js, css files in header of desk.html
 app_include_css = "/assets/practice_app/css/practice_app.css"
 app_include_js = "/assets/practice_app/js/practice_app.js"
