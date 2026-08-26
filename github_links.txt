@@ -1,0 +1,2 @@
+https://github.com/Cibin05/frappe_projects/blob/master/apps/practice_app/practice_app/practice/doctype/test_document/test_document.py
+https://github.com/Cibin05/frappe_projects/blob/master/apps/practice_app/practice_app/hooks.py
