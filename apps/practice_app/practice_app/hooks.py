@@ -41,28 +41,51 @@ web_include_js = "/assets/practice_app/js/pract.js"
 webform_include_js = {"details": "public/js/pract.js"}
 #webform_include_css = {"details": "public/css/practice_app.css"}
 # include js in page
-page_js = {"employee-dashboard" : "public/js/file.js"}
-before_install = "practice_app.setup.install.before_install"
-after_install = "practice_app.setup.install.after_install"
-after_sync = "practice_app.setup.install.after_sync"
-before_tests = "practice_app.tests.before_tests"
-before_uninstall = "practice_app.setup.uninstall.before_uninstall"
-after_uninstall = "practice_app.setup.uninstall.after_uninstall"
-before_migrate = "practice_app.migrate.before_migrate"
-after_migrate = "practice_app.migrate.after_migrate"
-before_write_file = "practice_app.overrides.file.before_write"
-get_sender_details = "practice_app.overrides.email.get_sender_details"
-website_clear_cache = "practice_app.overrides.clear.clear_website_cache"
-website_redirects=[
-{
-    "source": "/home",
-    "target": "/desk/details"
-}
-]
+# page_js = {"employee-dashboard" : "public/js/file.js"}
+# before_install = "practice_app.setup.install.before_install"
+# after_install = "practice_app.setup.install.after_install"
+# after_sync = "practice_app.setup.install.after_sync"
+# before_tests = "practice_app.tests.before_tests"
+# before_uninstall = "practice_app.setup.uninstall.before_uninstall"
+# after_uninstall = "practice_app.setup.uninstall.after_uninstall"
+# before_migrate = "practice_app.migrate.before_migrate"
+# after_migrate = "practice_app.migrate.after_migrate"
+# before_write_file = "practice_app.overrides.file.before_write"
+# get_sender_details = "practice_app.overrides.email.get_sender_details"
+# website_clear_cache = "practice_app.overrides.clear.clear_website_cache"
+# website_redirects=[
+# {
+#     "source": "/home",
+#     "target": "/desk/details"
+# }
+# ]
+# jinja = {
+#     "methods": [
+#         "practice_app.jinja.methods"
+#     ]
+# }
+# auto_cancel_exempted_doctypes = ["Payment Entry"] 
 #   home_page = "index"
-brand_html = '<div><h1>TennisMart</h></div>'
-base_template = "practice_app/templates/custom_page.html"
-
+# brand_html = '<div><h1>TennisMart</h></div>'
+# base_template = "practice_app/templates/custom_page.html"
+# on_login = "practice_app.overrides.clear.successful_login"
+# on_logout="practice_app.overrides.clear.clear_user_cache"
+# fixtures = ["details"]
+# default_mail_footer = """
+#  <div>
+#  Sent via <h1><a href="https://www.flipkart.com/" target="_blank">Flipkart</a></h1>
+# </div>
+# """
+# auth_hooks = [
+#     "practice_app.api.validate_custom_jwt"
+# ]
+# has_permission={"details":"practice_app.has_permission.permission"}
+# permission_query_conditions = {
+#     "details": "practice_app.detail.employee_query"
+# }
+# extend_doctype_class = {
+#     "details": ["practice_app.details.DetailsMixin"]
+# }
 # website_route_rules = [
 #     {"from_route": "/details/<name>", "to_route":"practice_app/project"},
 # ]
@@ -74,18 +97,49 @@ base_template = "practice_app/templates/custom_page.html"
 # extend_website_page_controller_context = {
 #     "frappe.www.404": "practice_app.page.context_404"
 # }
+# override_doctype_class = {
+#     "details": "practice_app.details.CustomDetails"
+# }
+# doctype_js = {
+#     "details": "public/js/todo.js",
+# }
+# override_whitelisted_methods = {
+#     "frappe.client.get_count": "practice_app.whitelisted.custom_get_count"
+# }
+# ignore_links_on_delete = ["test"]
+# additional_timeline_content = {
+#     "details": [
+#         "practice_app.timeline.student_timeline"
+#     ]
+# }
+scheduler_events = {
+    "daily": [
+        "practice_app.tasks.daily_maintenance"
+    ],
+}
+
 # get_web_pages_with_dynamic_routes = "practice_app.script.get_web_pages_with_dynamic_routes"
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
-# doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+# doctype_calendar_js = {"calendar" : "public/js/calendar_calendar.js"}
+# calendars=["calendar"]
+# auto_cancel_exempted_doctypes = ["payment"]
+# user_data_fields = [
+#     {
+#         "doctype": "details",
+#         "filter_by": "email",
+#     }
+# ]
 
+# signup_form_template = "practice_app/templates/Sign.html"
+# send_sms = "practice_app.overrides.sms.send_sms"
 # Svg Icons
 # ------------------
+
 # include app icons in desk
 # app_include_icons = "practice_app/public/icons.svg"
-
 # Home Pages
 # ----------
 
