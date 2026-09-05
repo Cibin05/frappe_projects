@@ -6,4 +6,4 @@ frappe.query_reports["Salary_rep"] = {
             fieldtype: "Data"
         }
 	],
-};
+};	
