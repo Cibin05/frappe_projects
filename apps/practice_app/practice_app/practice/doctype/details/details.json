@@ -7,50 +7,44 @@
  "engine": "InnoDB",
  "field_order": [
   "name1",
-  "name2",
-  "phone",
   "status",
-  "date",
-  "barcode"
+  "table",
+  "name3"
  ],
  "fields": [
-  {
-   "fieldname": "name1",
-   "fieldtype": "Link",
-   "label": "name",
-   "options": "Employee_work"
-  },
-  {
-   "fieldname": "name2",
-   "fieldtype": "Data",
-   "label": "name2"
-  },
-  {
-   "fieldname": "phone",
-   "fieldtype": "Data",
-   "label": "phone"
-  },
   {
    "default": "Active",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "admin",
-   "options": "Active\nInactive"
+   "options": "Active\nInactive",
+   "report_hide": 1
   },
   {
-   "fieldname": "date",
-   "fieldtype": "Attach",
-   "label": "date"
+   "fieldname": "name3",
+   "fieldtype": "Data",
+   "label": "name3"
   },
   {
-   "fieldname": "barcode",
-   "fieldtype": "Data"
+   "fieldname": "table",
+   "fieldtype": "Table",
+   "options": "details_child"
+  },
+  {
+   "bold": 1,
+   "default": "cibi",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "name",
+   "not_nullable": 1,
+   "options": "purchase order item"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-12 18:31:44.912011",
+ "modified": "2026-09-03 13:01:53.076784",
  "modified_by": "Administrator",
  "module": "practice",
  "name": "details",

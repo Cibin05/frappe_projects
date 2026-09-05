@@ -38,16 +38,6 @@
    "options": "Sick\ncasaul\nEarned"
   },
   {
-   "fieldname": "from_date",
-   "fieldtype": "Date",
-   "label": "From date"
-  },
-  {
-   "fieldname": "to_date",
-   "fieldtype": "Date",
-   "label": "To date"
-  },
-  {
    "default": "Pending",
    "fieldname": "status",
    "fieldtype": "Select",
@@ -64,12 +54,22 @@
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To date"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From date"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-24 12:27:06.262735",
+ "modified": "2026-09-03 12:11:11.983412",
  "modified_by": "Administrator",
  "module": "field",
  "name": "Leave Request",

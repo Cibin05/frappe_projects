@@ -564,3 +564,6 @@ def test_job(number):
     
 
     return f"Job {number} completed"
+
+def custom_logic(doc, method=None):
+    frappe.msgprint("Hook executed!")

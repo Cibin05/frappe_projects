@@ -1,15 +1,30 @@
-{% extends "templates/web.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frappe API Test</title>
+</head>
 
-{% block page_content %}
+<body>
 
-<div class="student-card">
-    <h1>Student Profile</h1>
+<button onclick="testAPI()">Test API</button>
 
-    <p>Name: Sowmi</p>
-    <p>Course: B.Tech Information Technology</p>
+<script>
 
-    <button id="greet-btn">Say Hello</button>
-    <p id="message"></p>
-</div>
+function testAPI() {
 
-{% endblock %} 
+    fetch("http://127.0.0.1:8000/api/method/frappe.auth.get_logged_user", {
+        headers: {
+            "Authorization": "token 683a86de1dbd03b:d46ba9461d1a8d7"
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    });
+
+}
+
+</script>
+
+</body>
+</html>

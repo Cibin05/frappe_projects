@@ -1,8 +1,18 @@
 import frappe
 from frappe.model.document import Document
-from frappe.utils import formatdate
+# from frappe.utils import formatdate
+# from frappe.utils import date_diff, now, pretty_date
+# from frappe.utils import comma_and
+from frappe.utils import get_filtered_list_url
 class details(Document):
-
+    pass
+    # def validate(self):
+    #     print(">>> DEFAULT CLASS")
+    
+    # @frappe.whitelist()
+    # def creation(self):
+    #     self.creatio = pretty_date(now())
+    # pass
     # @frappe.whitelist()
     # def get_message(self):
     #     return self.name1
@@ -13,11 +23,37 @@ class details(Document):
     #     doc.name1 = "preethi"
     #     doc.name2 = "sasikumar"
     #     doc.insert()
+    #     return "successful"
+# @frappe.whitelist()
+# def get_url():
+#     return get_filtered_list_url("details","b3sbjgjjvcb3sbjgjjvc")
+# @frappe.whitelist()
+# def employee():
+#     frappe.response.filename = "test.txt"
+#     frappe.response.filecontent = b"Hello World"
+#     frappe.response.type = "download"
+# @frappe.whitelist()
+# def detail():
+#     doc=frappe.db.get_list("details")  
+#     return frappe.get_doc("details",doc)
+# http://127.0.0.1:8000/api/method/practice_app.practice.doctype.details.details.generate_pdf
+# from frappe.utils.pdf import get_pdf
+# @frappe.whitelist()
+# def generate_pdf():
 
-    # @frappe.whitelist()
-    # def last_doc(self):
-    #     doc = frappe.get_last_doc("details")
-    #     return doc.name1
+#     html = """
+#     <h1>My Invoice</h1>
+#     <p>Customer: Cibin</p>
+#     <p>Amount: 500</p>
+#     """
+
+#     frappe.local.response.filename = "invoice.pdf"
+#     frappe.local.response.filecontent = get_pdf(html)
+#     frappe.local.response.type = "pdf"
+# @frappe.whitelist()
+# def last_doc(name2):
+#     doc = frappe.get_doc("details", name2)
+#     return doc.name1
 
     # @frappe.whitelist()
     # def last_doc_order(self):
@@ -102,10 +138,17 @@ class details(Document):
     # @frappe.whitelist()
     # def date_format(self):
     #     return formatdate(self.date,"dd/MM/yyyy")
-    @frappe.whitelist()
-    def email_send(self):
-        frappe.sendmail(
-            recipients=["cibinshanmugasundaram05@gmail.com"],
-            subject="Test Email",
-            message="Hello from Frappe!"
-        )
+    # @frappe.whitelist()
+    # def email_send(self):
+    #     frappe.sendmail(
+    #         recipients=["cibinshanmugasundaram05@gmail.com"],
+    #         subject="Test Email",
+    #         message="Hello from Frappe!"
+    #     )
+    # @frappe.whitelist()
+    # def caldate(self):
+    #     self.last=date_diff(self.end,self.start)
+
+    # @frappe.whitelist()
+    # def comma(self):
+    #     self.list=comma_and([self.name1,self.name2,self.name3],add_quotes=False)

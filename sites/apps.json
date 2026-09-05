@@ -27,5 +27,25 @@
         "required": [],
         "idx": 3,
         "version": "0.0.1"
+    },
+    "learning": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "2ea0b9f89dbe780aa184da0270d11a4e89f8f2a6",
+            "branch": "learning"
+        },
+        "required": [],
+        "idx": 4,
+        "version": "0.0.1"
+    },
+    "erpnext": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "0b50853985312bc64977f9324c55b5d8c1ab2e59",
+            "branch": "version-16"
+        },
+        "required": [],
+        "idx": 5,
+        "version": "16.34.1"
     }
 }

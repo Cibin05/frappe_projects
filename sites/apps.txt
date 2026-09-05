@@ -1,3 +1,5 @@
 frappe
 fieldapp
 practice_app
+erpnext
+learning
