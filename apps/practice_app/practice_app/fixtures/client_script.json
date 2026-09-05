@@ -1,0 +1,57 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Leave Request",
+  "enabled": 1,
+  "modified": "2026-09-03 12:10:30.485434",
+  "module": null,
+  "name": "count days",
+  "script": "frappe.ui.form.on('Leave Request', {\n    from_date: function(frm) {\n        calculate_days(frm);\n    },\n\n    to_date: function(frm) {\n        calculate_days(frm);\n    }\n});\n\nfunction calculate_days(frm) {\n    if (frm.doc.from_date && frm.doc.to_date) {\n\n        let from_date = frappe.datetime.str_to_obj(frm.doc.from_date);\n        let to_date = frappe.datetime.str_to_obj(frm.doc.to_date);\n\n        let difference = to_date - from_date;\n\n        let days = difference / (1000 * 60 * 60 * 24);\n\n        frm.set_value('total_days', days + 1);\n    }\n}",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "details",
+  "enabled": 0,
+  "modified": "2026-07-29 15:43:29.385358",
+  "module": "practice",
+  "name": "welcome",
+  "script": "frappe.ui.form.on(\"details\", {\n    \n    refresh(frm){\n        frappe.msgprint(\"Thank you\");\n    }\n});\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Project_name",
+  "enabled": 1,
+  "modified": "2026-07-30 17:18:25.507352",
+  "module": "practice",
+  "name": "member",
+  "script": "frappe.ui.form.on(\"Project_name\", {\r\n    refresh(frm) {\r\n        if (\r\n            frappe.user_roles.includes(\"Administrator\")\r\n        ) {\r\n            frm.enable_save();\r\n        } else {\r\n            frm.disable_save();\r\n        }\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "details",
+  "enabled": 0,
+  "modified": "2026-08-27 16:47:08.827359",
+  "module": null,
+  "name": "SUMMA",
+  "script": "frappe.listview_settings[\"details\"] = {\r\n\r\n    dropdown_button: {\r\n        get_label() {\r\n            return \"Actions\";\r\n        },\r\n\r\n        buttons: [\r\n            {\r\n                show(doc) {\r\n                    return doc.status === \"Active\";\r\n                },\r\n\r\n                get_label(doc) {\r\n                    return \"View\";\r\n                },\r\n\r\n                get_description(doc) {\r\n                    return `View ${doc.name1}`;\r\n                },\r\n\r\n                action(doc) {\r\n                    frappe.set_route(\"Form\", \"details\", doc.name);\r\n                }\r\n            },\r\n\r\n            {\r\n                show(doc) {\r\n                    return doc.status === \"Active\";\r\n                },\r\n\r\n                get_label(doc) {\r\n                    return \"Message\";\r\n                },\r\n\r\n                get_description(doc) {\r\n                    return `Send message to ${doc.name1}`;\r\n                },\r\n\r\n                action(doc) {\r\n                    frappe.msgprint(`Hello ${doc.name1}`);\r\n                }\r\n            }\r\n        ]\r\n    }\r\n};",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "User",
+  "enabled": 1,
+  "modified": "2026-09-05 16:48:46.102358",
+  "module": null,
+  "name": "LMS",
+  "script": "frappe.ui.form.on('User', {\n    refresh(frm) {\n        frm.add_custom_button('Send Welcome Email', () => {\n            frappe.msgprint('Email Sent!');\n        }, 'Actions');\n    }\n});",
+  "view": "Form"
+ }
+]

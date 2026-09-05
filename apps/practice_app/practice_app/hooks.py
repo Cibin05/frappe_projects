@@ -68,6 +68,7 @@ webform_include_js = {"details": "public/js/pract.js"}
 #         "practice_app.jinja.methods"
 #     ]
 # }
+fixtures = ["Client Script"]
 # auto_cancel_exempted_doctypes = ["Payment Entry"] 
 #   home_page = "index"
 # brand_html = '<div><h1>TennisMart</h></div>'
