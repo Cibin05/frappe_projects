@@ -1,3 +1,4 @@
 1. https://github.com/Cibin05/frappe_projects/blob/main/apps/practice_app/practice_app/www/articles.html
 2. https://github.com/Cibin05/frappe_projects/blob/main/apps/practice_app/practice_app/www/articles.py
 3. https://github.com/Cibin05/frappe_projects/blob/main/apps/practice_app/practice_app/practice/doctype/article/test_article.py
+4. https://github.com/Cibin05/frappe_projects/blob/master/Screenshot%202026-09-07%20185338.png
